@@ -23,6 +23,14 @@ function clicks(event){
             students.push(student);
             addStudent(student);
             // check if an entry with students info is in the array - dont push
+            for(let item of students){
+                if(item.firstName === student.firstName && 
+                   item.lastName === student.lastName && 
+                   item.progname === student.progname
+            ){
+                alert("the student already exists");
+            }
+            }
 
             firstnameinput.value = '';
             lastnameinput.value = '';
