@@ -4,29 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM manipulation example</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../week13ex1/css/style.css">
+    <meta name="viewport" content="width=device-width, height=device-height">
+    <script src="js/javascript.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>Enter student's information</h1>
-        <button>Change Background Color</button>
+        <button id="background_button">Change Background Color</button>
     </header>
 
-    <section>
-        <label>First Name:</label>
-        <input id="firstname" type="text">
-        <label>Last Name:</label>
-        <input id="lastname" type="text">
-        <label>Program Name:</label>
-        <input id="progname" type="text">
-        <button>Submit</button>
+    <section class="section-container">
+            <label class="first-name">First Name:</label>
+            <input id="firstname" type="text">
+
+            <label class="last-name">Last Name:</label>
+            <input id="lastname" type="text">
+
+            <label class="program">Program Name:</label>
+            <input id="progname" type="text">
+
+         <div class="submit-container">   
+            <button>Submit</button>
+         </div>
     </section>
 
-    <section>
+    <section class="enrolled">
         <h2>Enrolled students</h2>
-        <ul>Sudents Enrolled in CIT</ul>
-        <ul>Sudents Enrolled in CST</ul>
+        <div id="list">
+            <ul id="CIT">Sudents Enrolled in CIT</ul>
+            <ul id="CST">Sudents Enrolled in CST</ul>
+        </div>
     </section>
 
 </body>
