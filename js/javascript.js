@@ -21,6 +21,7 @@ function clicks(event){
             };
 
             students.push(student);
+            addStudent(student);
             // check if an entry with students info is in the array - dont push
 
             firstnameinput.value = '';
@@ -43,6 +44,18 @@ function clicks(event){
 bodyRef.addEventListener("click", clicks)
 
 
-function addStudent(){
-    
+function addStudent(studentobject){
+    // create li
+    const new_li = document.createElement('li')
+    // select two uls using ID
+    const CIT = document.querySelector('#CIT')
+    const CST = document.querySelector('#CST') 
+    // update textContent of the li using students firstname and last name
+    new_li.textContent = `${studentobject["firstName"]} ${studentobject['lastName']}`;
+    if(studentobject['progname'] === 'CIT'){
+        CIT.appendChild(new_li)
+    } else if (studentobject['progname'] === 'CST'){
+        CST.appendChild(new_li)
+    }
+    // using student progname decide which ul to append li to
 }
